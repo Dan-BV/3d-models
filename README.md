@@ -41,7 +41,7 @@ All STL files are in millimetres. The full-resolution Part 1 and Part 2 STLs (�
 | Bellows fit | OEM bellows cuff (measured): end Ø59 with R1 edge, sealing bead Ø61, Ø60, R4 shoulder, Ø63, wall 2.5 mm (bore Ø54); two wedge lugs 15 mm wide × 9 mm long, rising to 2.5 mm (Ø67) at the back, 26 mm from the cuff end. Clearance 0.5 mm per side radially and around the lugs, 0.5 mm axial lug play. Free length ≈ 146 mm, fully compressed ≈ 109 mm; the rim position in the car is unchanged, the cuff stop is 1 mm closer to the filter than in the previous flange |
 | Bellows position | Flange rim 81 mm from the filter-inlet rim (bellows close to its free length), bellows bend 25° |
 | Collar joint | On the straight Ø63 section: the Part 2 collar (ID 63.3, OD 67.3, 10 mm) slides over the Part 1 tube end, butt joint with a flush Ø58 bore, 25° cone from the collar to the tube |
-| Clip | Separate clip (`parts/Clip_v25`, 26 mm wide) at the mouth centre. It hooks under the rear overhang of the hood-seal lip, its top rests on the lip and its front stop runs down the lip face. It is bonded with epoxy to a tongue under the Part 1 floor through a glue tray on the clip. The tray gives ±3° / ±1 mm of play, because the lip is not parallel to the bump wall |
+| Clip | Separate clip (`parts/Clip_v26`, 26 mm wide) at the mouth centre. Its tooth hooks 1.35 mm under the rear overhang of the hood-seal lip, its top covers the lip with 0.25 mm clearance all round, and its front stop runs down the lip face onto the foot fillet. A release lever below the hook pulls the tooth out. It is bonded with epoxy to a tongue under the Part 1 floor through a glue tray on the clip. The tray lets the tongue sit 4 mm forward, 1.6–2 mm back and up to ±3° off nominal, because the lip is not parallel to the bump wall |
 
 ![Side view](images/final_side.png)
 
@@ -57,7 +57,7 @@ if you have an enclosed printer.
 | Part | Size (mm) | Orientation (as exported) | Supports |
 |---|---|---|---|
 | `Part1_mouth_clips` | 161 × 94 × 241 | Standing on the long lower edge of the mouth, tube up (B2) | No slicer supports. Print `print/Part1_v25_B2_with_prop.stl.zip`, which includes a breakaway rib prop with a ≥ 0.32 mm gap. The prop keeps the tall part from tipping and is never inside the duct or the mouth window |
-| `Clip_v25` | 21 × 6.5 × 26 | End face on the bed | None |
+| `Clip_v26` | 23.6 × 9.1 × 26 | End face on the bed (`print/Clip_v26.stl`) | None. The only bridge is the tray end wall (≈ 5 × 11 mm). The roof over the lip is 0.73 mm and the rear tray wall 0.8 mm: check in the slicer preview that both print as two lines (wall line width ≤ 0.37 mm if not) |
 | `Part2_bend_tube` | 67 × 84 × 92 | Spigot tip down, collar up (use the brim of the B2 profile) | None: no overhang inside the bore is steeper than 50° (the bend leans at most 39°); outside only the 45° spigot tip chamfer and ≈ 3 cm² under the collar cone |
 | `Part3_bayonet_flange` | 73 × 73 × 46 | Base (spigot sleeve) down | None (45° cone under the stop ring, windows bridge ≈ 18 mm) |
 
@@ -81,7 +81,9 @@ on the tape land. Parts 2 and 3 print with slicer supports restricted to "touchi
 
 ### Fit test (optional)
 
-The v25 test piece confirmed the fit on the car; `parts/` now holds the v25 Part 1 and clip.
+The v25 test piece confirmed the fit on the car; `parts/` now holds the v25 Part 1 and the v26 clip.
+The v25 clip in the test-piece files below has a shallower tooth (0.65 mm), no release lever and a
+smaller tray; use `print/Clip_v26.stl` for the car.
 
 v25 fixes the skew seen with the v24 test piece. The seal lip is not parallel to the bump wall:
 near the clip its front face runs about 2° toward the bump and its top rises about 1°. A rigid
@@ -134,12 +136,12 @@ are test pieces of earlier designs.)
 2. Slide **Part 3** (bayonet flange) over the Ø63 spigot of Part 2 (0.15 mm radial clearance,
    10 mm overlap) until the conical spigot tip seats on the internal cone. It rotates freely.
 3. Cut a rectangular opening in the rear wall of the cross-member bump.
-4. Fit the **clip** on the hood-seal lip at the mouth centre: hook the tooth under the rear overhang
-   and press it down. Fill its tray about half full with thick two-part epoxy.
+4. Fit the **clip** (`Clip_v26`) on the hood-seal lip at the mouth centre: pull the release lever
+   back, hook the tooth under the rear overhang, press the clip down and let the lever go. Fill its tray about half full with thick two-part epoxy.
 5. Apply 1 mm double-sided silicone (or VHB) tape to the mouth land and press Part 1 onto the bump
    wall, so that its tongue sinks into the epoxy. Hold it until the epoxy sets. After that the
-   assembly can be removed and refitted: tilt the mouth up by about 25°, hook it on and swing it
-   down.
+   assembly can be removed and refitted: pull the release lever back to free the tooth from the
+   lip and lift the part off; to refit, press it down until the tooth snaps under the overhang.
 6. Insert the bellows cuff into the flange with the lugs in the entry grooves, push it down to the
    stop ring and twist counter-clockwise so the lugs move into the windows. Do the same at the
    filter inlet, then rotate the flange to its final position and fix it to the spigot (glue or a
@@ -153,6 +155,8 @@ Check hood clearance above the seal lip on the car before final assembly.
 - v25 (current `parts/`): Part 1 refitted to a hand-measured seal-lip profile (the land is 1.0 mm
   from the wall, the floor over the lip is lower, there is no saddle on Part 1, and the clip is a
   separate glued piece; see the fit-test section). It is confirmed on the car with the v25 test piece.
+  The clip is v26: 1.35 mm tooth (v25: 0.65 mm), a release lever, 0.25 mm clearance around the whole
+  lip, a larger tray (tongue play 4 mm forward, 1.6–2 mm back) and a longer front stop.
   Part 2 and Part 3 are unchanged from v22, except that a hairline crack (≈ 0.005 mm, half the wall
   ring) at the spigot / bend junction of Part 2 was filled; the repaired Part 2 matches the master
   within 0.005 mm everywhere else.
