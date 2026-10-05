@@ -41,7 +41,7 @@ All STL files are in millimetres. The full-resolution Part 1 and Part 2 STLs (�
 | Bellows fit | OEM bellows cuff (measured): end Ø59 with R1 edge, sealing bead Ø61, Ø60, R4 shoulder, Ø63, wall 2.5 mm (bore Ø54); two wedge lugs 15 mm wide × 9 mm long, rising to 2.5 mm (Ø67) at the back, 26 mm from the cuff end. Clearance 0.5 mm per side radially and around the lugs, 0.5 mm axial lug play. Free length ≈ 146 mm, fully compressed ≈ 109 mm; the rim position in the car is unchanged, the cuff stop is 1 mm closer to the filter than in the previous flange |
 | Bellows position | Flange rim 81 mm from the filter-inlet rim (bellows close to its free length), bellows bend 25° |
 | Collar joint | On the straight Ø63 section: the Part 2 collar (ID 63.3, OD 67.3, 10 mm) slides over the Part 1 tube end, butt joint with a flush Ø58 bore, 25° cone from the collar to the tube |
-| Clip | Separate clip (`parts/Clip_v26`, 26 mm wide) at the mouth centre. Its tooth hooks 1.35 mm under the rear overhang of the hood-seal lip, its top covers the lip with 0.25 mm clearance all round, and its front stop runs down the lip face onto the foot fillet. A release lever below the hook pulls the tooth out. It is bonded with epoxy to a tongue under the Part 1 floor through a glue tray on the clip. The tray lets the tongue sit 4 mm forward, 1.6–2 mm back and up to ±3° off nominal, because the lip is not parallel to the bump wall |
+| Clip | Separate clip (`parts/Clip_v26`, 26 mm wide) at the mouth centre. Its tooth hooks 1.35 mm under the rear overhang of the hood-seal lip (0.30 mm below it). The roof (1.1 mm) and the front stop follow the lip with 0.25 mm clearance; the lip's front top corner is taken as R4 (measured on the car with test prints), and the rear hook cavity is square with 1.25 mm play at the overhang end. The front stop runs down the lip face onto the foot fillet. A release lever below the hook pulls the tooth out. The clip top is 0.4 mm below the Part 1 floor. It is bonded with epoxy to a tongue under the Part 1 floor through a glue tray on the clip. The tray lets the tongue sit 4 mm forward, 1.6–2 mm back and up to ±3° off nominal, because the lip is not parallel to the bump wall |
 
 ![Side view](images/final_side.png)
 
@@ -57,14 +57,18 @@ if you have an enclosed printer.
 | Part | Size (mm) | Orientation (as exported) | Supports |
 |---|---|---|---|
 | `Part1_mouth_clips` | 161 × 94 × 241 | Standing on the long lower edge of the mouth, tube up (B2) | No slicer supports. Print `print/Part1_v25_B2_with_prop.stl.zip`, which includes a breakaway rib prop with a ≥ 0.32 mm gap. The prop keeps the tall part from tipping and is never inside the duct or the mouth window |
-| `Clip_v26` | 23.6 × 9.1 × 26 | End face on the bed (`print/Clip_v26.stl`) | None. The only bridge is the tray end wall (≈ 5 × 11 mm). The roof over the lip is 0.73 mm and the rear tray wall 0.8 mm: check in the slicer preview that both print as two lines (wall line width ≤ 0.37 mm if not) |
+| `Clip_v26` | 24.6 × 11.0 × 26 | End face on the bed (`print/Clip_v26.stl`) | None. The only bridge is the tray end wall (≈ 5 × 12 mm). Print with `print/cura/Ender3Pro_PETG_CAI_clip.curaprofile` (100 % infill, 3 mm brim). The whole profile lies in each layer, so a finer layer height does not improve the fit |
 | `Part2_bend_tube` | 67 × 84 × 92 | Spigot tip down, collar up (use the brim of the B2 profile) | None: no overhang inside the bore is steeper than 50° (the bend leans at most 39°); outside only the 45° spigot tip chamfer and ≈ 3 cm² under the collar cone |
 | `Part3_bayonet_flange` | 73 × 73 × 46 | Base (spigot sleeve) down | None (45° cone under the stop ring, windows bridge ≈ 18 mm) |
 
 The Cura profile used for the parts is `print/cura/Ender3Pro_PETG_CAI.curaprofile` (import it via
 Preferences → Profiles → Import). For Part 1 with the prop use `print/cura/Ender3Pro_PETG_CAI_v25_B2.curaprofile`:
 the same settings plus a 10 mm brim, a z-hop over printed parts, and supports off. Its +0.9 mm Z offset (`adhesion_z_offset`) needs the Z Offset
-Setting plugin from the Cura Marketplace; adjust it to your own printer.
+Setting plugin from the Cura Marketplace; adjust it to your own printer. For the clip use
+`print/cura/Ender3Pro_PETG_CAI_clip.curaprofile`: the main settings with 100 % infill, a 3 mm brim,
+an initial-layer expansion of −0.3 mm and 90 % initial-layer flow against elephant's foot, and a z-hop
+on every travel. `print/cura/Ender3Pro_PETG_TEST_clip_v26.curaprofile` is the fast profile for clip test
+prints.
 
 Suggested PETG settings: nozzle 240–245 °C, bed 80 °C (glue stick as release layer),
 fan 30–40 %, 40–50 mm/s, 4 perimeters, 30 % gyroid. Add a modifier over the clip area with
@@ -137,7 +141,9 @@ are test pieces of earlier designs.)
    10 mm overlap) until the conical spigot tip seats on the internal cone. It rotates freely.
 3. Cut a rectangular opening in the rear wall of the cross-member bump.
 4. Fit the **clip** (`Clip_v26`) on the hood-seal lip at the mouth centre: pull the release lever
-   back, hook the tooth under the rear overhang, press the clip down and let the lever go. Fill its tray about half full with thick two-part epoxy.
+   back, hook the tooth under the rear overhang, press the clip down and let the lever go.
+   Sand the tray and the Part 1 tongue (P80–P120), scratch a few grooves, degrease with isopropyl
+   alcohol, then fill the tray about half full with thick two-part epoxy.
 5. Apply 1 mm double-sided silicone (or VHB) tape to the mouth land and press Part 1 onto the bump
    wall, so that its tongue sinks into the epoxy. Hold it until the epoxy sets. After that the
    assembly can be removed and refitted: pull the release lever back to free the tooth from the
@@ -155,8 +161,11 @@ Check hood clearance above the seal lip on the car before final assembly.
 - v25 (current `parts/`): Part 1 refitted to a hand-measured seal-lip profile (the land is 1.0 mm
   from the wall, the floor over the lip is lower, there is no saddle on Part 1, and the clip is a
   separate glued piece; see the fit-test section). It is confirmed on the car with the v25 test piece.
-  The clip is v26: 1.35 mm tooth (v25: 0.65 mm), a release lever, 0.25 mm clearance around the whole
-  lip, a larger tray (tongue play 4 mm forward, 1.6–2 mm back) and a longer front stop.
+  The clip is v26, refined with test prints on the car: 1.35 mm tooth 0.30 mm below the overhang
+  (v25: 0.65 mm), a release lever, 0.25 mm clearance along the roof and the lip face, an R4 front top
+  corner (the measured lip is rounder than the R2 of the drawn profile), a square rear cavity with
+  1.25 mm play, a 1.1 mm roof, a larger tray (tongue play 4 mm forward, 1.6–2 mm back) and a longer
+  front stop.
   Part 2 and Part 3 are unchanged from v22, except that a hairline crack (≈ 0.005 mm, half the wall
   ring) at the spigot / bend junction of Part 2 was filled; the repaired Part 2 matches the master
   within 0.005 mm everywhere else.
