@@ -16,3 +16,7 @@ desktop.ini
 citroen-cold-air-intake/parts/Part1_mouth_clips.stl
 citroen-cold-air-intake/parts/Part2_bend_tube.stl
 citroen-cold-air-intake/print/Part1_v25_B2_with_prop.stl
+
+# Derived from a downloaded third-party file (grip_a7c.stl); rebuilt by platform_hybrid.py
+sony-a7c-cage/a7c_plate.json
+sony-a7c-cage/a7c_plate_trimmed.stl

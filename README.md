@@ -11,6 +11,7 @@ and how to print it.
 | [`naruto/`](naruto/) | 120 mm Naruto figurine | PLA |
 | [`sherlock/`](sherlock/) | 75 mm Sherlock bust on a podium | PLA |
 | [`skeleton/`](skeleton/) | Print-in-place skeleton plate, 100 / 70 / 50 % | PLA |
+| [`sony-a7c-cage/`](sony-a7c-cage/) | Cage for the Sony a7C after the SmallRig 3212, and its grip on a bottom plate | PETG / TPU |
 
 [`tools/cura_slice/`](tools/cura_slice/) is the CuraEngine harness used to check profiles and supports.
 
