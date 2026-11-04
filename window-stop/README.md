@@ -28,7 +28,7 @@ Ender 3 Pro, PETG, flat on the bed with no supports. The layers run parallel to 
 so the load from the sash acts along the layers rather than across them.
 
 Profile: `Ender3Pro_PETG_WindowStop.curaprofile` (Preferences → Profiles → Import). It is the
-`print/cura/Ender3Pro_PETG_CAI` profile with 5 walls, 5 top / 5 bottom layers, 40 % gyroid,
+`citroen-cold-air-intake/print/cura/Ender3Pro_PETG_CAI` profile with 5 walls, 5 top / 5 bottom layers, 40 % gyroid,
 a 5 mm brim (for the narrow tab and the sharp slot corners) and a 0.4 mm z-hop. 235 / 240 °C first
 layer, bed 80 °C with glue stick, fan 40 % from layer 3, Z offset 0.9 mm (Z Offset Setting plugin).
 

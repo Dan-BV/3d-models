@@ -13,6 +13,6 @@ desktop.ini
 ~$*
 
 # Full-resolution STLs are too large for GitHub; the repo has zipped copies (*.stl.zip)
-parts/Part1_mouth_clips.stl
-parts/Part2_bend_tube.stl
-print/Part1_v25_B2_with_prop.stl
+citroen-cold-air-intake/parts/Part1_mouth_clips.stl
+citroen-cold-air-intake/parts/Part2_bend_tube.stl
+citroen-cold-air-intake/print/Part1_v25_B2_with_prop.stl
