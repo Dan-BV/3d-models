@@ -22,6 +22,7 @@ Other projects in this folder:
 | `naruto/` | 120 mm Naruto figurine and its Cura profiles (see `naruto/README.md`) |
 | `sherlock/` | 75 mm Sherlock bust on a podium (see `sherlock/README.md`) |
 | `skeleton/` | Print-in-place skeleton plate, 100 / 70 / 50 % (see `skeleton/README.md`) |
+| `window-stop/` | 98.5 × 71 × 25 mm lattice window stop in PETG and its Cura profile (see `window-stop/README.md`) |
 | `tools/cura_slice/` | CuraEngine harness used to check profiles and supports |
 
 All STL files are in millimetres. The full-resolution Part 1 and Part 2 STLs (≈ 105 / 55 MB,
