@@ -142,6 +142,7 @@ comes out with a firm pull, and that its cord leaves straight back through the s
 
 Print the cover with tree supports under the sloped top and the tube bottoms. The base prints
 standing on its plate, so the cradles and tongues come out vertical. The clamp pins point
-forward; their heads are 45° cones, and the shanks print as short horizontal cylinders. The
+forward; their heads are 45° cones, and their undersides are flat, level with the shank
+bottoms, so nothing starts in mid-air. The
 dovetail tongues, the hooks and the channel strips on the back are vertical too. The wall plate prints flat on its back; its
 groove flanks are 45° overhangs.

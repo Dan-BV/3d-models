@@ -517,6 +517,14 @@ def run(_context: str):
         ri.setAngleExtent(False, adsk.core.ValueInput.createByString("360 deg"))
         ri.participantBodies = [base]
         feats.revolveFeatures.add(ri)
+    # flatten the pins' undersides level with the shank bottom: the base prints standing, and a
+    # round head would start its first layer in mid-air
+    sk = xy_sketch(CLAMP_Z - HEAD_R - 1, "Clamp pin flats")
+    for x in CLAMP_XS:
+        z = CLAMP_Z - HEAD_R - 1
+        poly(sk, [(x - HEAD_R - 1, BW1 - 0.01, z), (x + HEAD_R + 1, BW1 - 0.01, z),
+                  (x + HEAD_R + 1, BW1 - 10, z), (x - HEAD_R - 1, BW1 - 10, z)])
+    extrude(all_profiles(sk), HEAD_R + 1 - PIN_R, CUT, base)
 
     # gussets plate-to-wall
     for x in GUSSET_XS:
