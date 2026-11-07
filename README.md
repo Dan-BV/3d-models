@@ -8,6 +8,7 @@ and how to print it.
 |---|---|---|
 | [`citroen-cold-air-intake/`](citroen-cold-air-intake/) | Cold air intake duct for a Citroën engine bay: three parts, a clip and a mouth stencil | PETG |
 | [`window-stop/`](window-stop/) | 98.5 × 71 × 25 mm lattice window stop | PETG |
+| [`oralb-holder/`](oralb-holder/) | Wall holder for four Oral-B brushes with the chargers and cords hidden inside: wall plate, base and slide-off cover, plus a cradle fit test (Bambu P2S profile) | PETG |
 | [`naruto/`](naruto/) | 120 mm Naruto figurine | PLA |
 | [`sherlock/`](sherlock/) | 75 mm Sherlock bust on a podium | PLA |
 | [`skeleton/`](skeleton/) | Print-in-place skeleton plate, 100 / 70 / 50 % | PLA |

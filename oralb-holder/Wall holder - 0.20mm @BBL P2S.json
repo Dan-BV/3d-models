@@ -1,0 +1,21 @@
+{
+    "type": "process",
+    "name": "Wall holder - 0.20mm @BBL P2S",
+    "inherits": "0.20mm Standard @BBL P2S",
+    "from": "User",
+    "is_custom_defined": "0",
+    "version": "02.09.00.74",
+    "print_settings_id": "Wall holder - 0.20mm @BBL P2S",
+    "layer_height": "0.2",
+    "wall_loops": "3",
+    "top_shell_layers": "4",
+    "bottom_shell_layers": "4",
+    "sparse_infill_density": "15%",
+    "sparse_infill_pattern": "gyroid",
+    "seam_position": "back",
+    "enable_support": "0",
+    "brim_type": "no_brim",
+    "compatible_printers": [
+        "Bambu Lab P2S 0.4 nozzle"
+    ]
+}
